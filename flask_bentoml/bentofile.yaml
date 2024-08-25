@@ -1,0 +1,15 @@
+service: "app:svc"  # 指向BentoML的Service对象
+
+include:
+  - "*.py"
+  - "templates/*"
+
+python:
+  packages:
+    - bentoml
+    - transformers
+    - torch
+    - flask
+    - prometheus_client
+
+
