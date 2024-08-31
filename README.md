@@ -1,12 +1,15 @@
 # bentoml_build  
 调用了huggingface上的一个情感分析的模型，集成到bento里，并容器化部署到docker上。  
-使用Prometheus对页面的请求次数和预测次数进行监控  
+使用Prometheus对相关参数进行监控  
   
 ## 运行flask服务  
 ```Bash
 python app.py
 ```
-![image](https://github.com/user-attachments/assets/4bda1f8d-405f-406d-8126-e6e8729e1df1)
+![image](https://github.com/user-attachments/assets/dc7564f6-b9c7-40b1-a8d3-93fc42d41e21)  
+![image](https://github.com/user-attachments/assets/1ccb5821-f398-4d0c-9f50-6c615b5c0c1b)  
+
+
 
 ## 构建和运行 Bento  
 ```Bash
@@ -28,6 +31,18 @@ docker run --rm -p 3000:3000 sentiment_analysis_service:v6lu4ddcrknr4xb2
 ![image](https://github.com/user-attachments/assets/d73cea36-cb02-49f0-9d7b-49ebc811bc3b)
 
 ## 运行grafana  
-监控页面请求次数和预测次数
-![image](https://github.com/user-attachments/assets/5028916c-6f11-4b2f-8221-07a6d6db30de)
+![image](https://github.com/user-attachments/assets/5441a915-607c-47a0-86b4-e8bcecb67b39)
+
+
+## 记录的一些指标  
+![image](https://github.com/user-attachments/assets/5cbd2a20-cd5a-4abb-a827-ab687f07450c)  
+
+## 请求响应日志记录在requests.log文件中  
+![image](https://github.com/user-attachments/assets/0b2bfcee-6cfb-4729-a7d0-2e143ade076e)
+ 
+
+## 调用次数限制
+![image](https://github.com/user-attachments/assets/7d542ca4-42a4-46b9-8f0b-518690062511)
+![image](https://github.com/user-attachments/assets/de0c2c56-316f-4e79-ae13-8ed7920d7ec1)
+
 
