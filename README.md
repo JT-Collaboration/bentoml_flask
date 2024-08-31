@@ -45,4 +45,7 @@ docker run --rm -p 3000:3000 sentiment_analysis_service:v6lu4ddcrknr4xb2
 ![image](https://github.com/user-attachments/assets/7d542ca4-42a4-46b9-8f0b-518690062511)
 ![image](https://github.com/user-attachments/assets/de0c2c56-316f-4e79-ae13-8ed7920d7ec1)
 
+## 一些问题  
+1.我的电脑是amd的集显，GPU相关参数好像记录不到。
+2.没有做到在创建模型的时候生成API-key记录到数据库中，目前是我用另外的方法生成10位随机的字符串并记录到数据库中的。
 
