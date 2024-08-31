@@ -8,14 +8,20 @@
 <body>
     <h1>输入json文本进行情感分析</h1>
     <form method="POST" action="/">
-        <label for="text">Enter Text:</label>
-        <input type="text" id="text" name="text" required>
+        <label for="api_key">API Key:</label>
+        <input type="text" id="api_key" name="api_key" required>
+        <br>
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" required><br>
         <button type="submit">Analyze</button>
     </form>
 
     {% if result %}
     <h2>预测结果:</h2>
     <p>{{ result }}</p>
+    {% elif error_message %}
+    <h2 style="color: red;">Error:</h2>
+    <p>{{ error_message }}</p>
     {% endif %}
 </body>
 </html>
