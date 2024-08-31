@@ -1,0 +1,10 @@
+bentoml
+transformers
+torch
+flask
+flask_httpauth
+flask_limiter
+prometheus_client
+psutil
+gputil
+sqlite3
